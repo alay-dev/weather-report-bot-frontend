@@ -49,7 +49,7 @@ const MemberList = ({ users, bannedUserList }: MemberListProps) => {
       await unBanUser(chatId).unwrap();
       toast({
         title: "Success",
-        description: "Chat member baned",
+        description: "Chat member unbaned",
       });
       dispatch(telegramApi.util.invalidateTags(["bannedUser", "users"]));
     } catch (err) {
